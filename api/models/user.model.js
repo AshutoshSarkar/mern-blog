@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema(
       unique: true,
     },
     email: {
-     type: String,
+      type: String,
       require: true,
       unique: true,
     },
@@ -20,6 +20,6 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const User=mongoose.model('User',userSchema);
+const User = mongoose.model("User", userSchema);
 
 export default User;
