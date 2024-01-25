@@ -83,15 +83,15 @@ export default function FooterCom() {
         <div className="flex gap-6 justify-center mt-5">
           <div className="flex gap-2">
             <Footer.Icon href="https://www.instagram.com/ashurk18022022/" icon={BsInstagram} />
-            <p>Instagram</p>
+            
           </div>
           <div className="flex gap-2">
-            <Footer.Icon href="https://www.instagram.com/ashurk18022022/" icon={BsTwitterX} />
-            <p>Twitter</p>
+            <Footer.Icon href="https://twitter.com/AshuSar93431976" icon={BsTwitterX} />
+            
           </div>
-          <div className="flex gap-2">
-            <Footer.Icon href="https://www.instagram.com/ashurk18022022/" icon={BsLinkedin} />
-            <p>Linkedin</p>
+          <div className="flex gap-3">
+            <Footer.Icon href="https://www.linkedin.com/in/ashu-sarkar-07362322b/" icon={BsLinkedin} />
+            
           </div>
         </div>
       </div>
