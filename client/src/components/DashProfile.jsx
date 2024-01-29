@@ -17,6 +17,9 @@ export default function DashProfile() {
   const [ImageFileUrl, setImageFileUrl] = useState(null);
   const [imageFileUploadProgress, setImageFileUploadProgress] = useState(null);
   const [imageFileUploadError, setImageFileUploadError] = useState(null);
+  const [username, setUsername] = useState(currentUser.username);
+  const [email, setEmail] = useState(currentUser.email);
+  const [password, setPassword] = useState('');
 
   const filePickerRef = useRef();
 
@@ -116,15 +119,23 @@ export default function DashProfile() {
           type="text"
           id="username"
           placeholder="Enter Your Username"
-          defaultValue={currentUser.username}
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
         />
         <TextInput
           type="email"
           id="email"
           placeholder="Enter Your Email"
-          defaultValue={currentUser.email}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
-        <TextInput type="password" id="password" />
+        <TextInput
+          type="password"
+          id="password"
+          placeholder="Enter Your Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
         <Button type="submit" gradientDuoTone="purpleToBlue" outline>
           Update
         </Button>
