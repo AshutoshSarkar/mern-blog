@@ -149,6 +149,7 @@ export default function CreatePost() {
           required
           onChange={(value) => {
             setFormData({ ...formData, content: value });
+
           }}
         />
         <Button type='submit' gradientDuoTone='purpleToPink' className='mb-8'>
