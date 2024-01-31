@@ -19,8 +19,8 @@ import {
   deleteUserStart,
   signoutSuccess,
 } from "../redux/user/userSlice.js";
-import { useDispatch } from "react-redux";
 import { HiOutlineExclamationCircle } from "react-icons/hi";
+import { useDispatch } from "react-redux";
 
 export default function DashProfile() {
   const { currentUser, error } = useSelector((state) => state.user);
@@ -38,6 +38,17 @@ export default function DashProfile() {
   const [formData, setFormData] = useState({});
   const filePickerRef = useRef();
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    // Set initial state for imageFile and ImageFileUrl based on existing profile picture
+    if (currentUser.profilePicture) {
+      setImageFile(null); // Set to null to indicate that an existing image is present
+      setImageFileUrl(currentUser.profilePicture);
+    } else {
+      setImageFile(null);
+      setImageFileUrl(null);
+    }
+  }, [currentUser]);
 
   const handleImageFile = (e) => {
     setImageFile(e.target.files[0]);
@@ -238,7 +249,6 @@ export default function DashProfile() {
           value={email}
           onChange={handleChange}
         />
-
         <TextInput
           type="password"
           id="password"
@@ -289,10 +299,10 @@ export default function DashProfile() {
             </h3>
             <div className="flex justify-center gap-6">
               <Button color="failure" onClick={handleDeleteUser}>
-                Yes , I'm Sure
+                Yes, I'm Sure
               </Button>
               <Button color="gray" onClick={() => setShowModal(false)}>
-                No, Cancel
+                Cancel
               </Button>
             </div>
           </div>
