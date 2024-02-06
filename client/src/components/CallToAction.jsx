@@ -10,14 +10,14 @@ export default function CallToAction() {
             <p className='text-gray-500 my-2'>
                 Get my drive link to get the codes to learn JavaScript
             </p>
-            <Button gradientDuoTone='purpleToPink' className='rounded-tl-xl rounded-bl-none'>
-                <a href="" target='_blank' rel='noopener noreferrer'>
-                    100 JavaScript Projects
+            <Button gradientDuoTone='purpleToPink' pill outline>
+                <a href="https://drive.google.com/drive/folders/1YRMbPmuzmX9DOXk_fvXM7DXHUB3i3vnL?usp=drive_link" target='_blank' rel='noopener noreferrer'>
+                Start Learning JavaScript with my Drive 
                 </a>
             </Button>
         </div>
         <div className="p-7 flex-1">
-            <img src="https://bairesdev.mo.cloudinary.net/blog/2023/08/What-Is-JavaScript-Used-For.jpg" />
+            <img src="https://cdn.vectorstock.com/i/1000x1000/22/17/javascript-programming-language-vector-12502217.webp" />
         </div>
     </div>
   )
