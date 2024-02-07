@@ -18,4 +18,6 @@ router.post('/signout', signout);
 router.get('/getusers', verifyToken, getUsers);
 router.get('/:userId', getUser);
 
+
+
 export default router;
